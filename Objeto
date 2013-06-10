@@ -1,0 +1,44 @@
+package utilidades;
+import org.ejml.simple.*;
+import utilidades.BitMatriz;
+
+import java.io.Serializable;
+
+/**
+ * Almacena Objeto para Serializar
+ * guardando dataset, bisectrices y firmas
+ * @author Alexis Villalobos
+ */
+public class Objeto implements Serializable{
+    
+   // private double[] item;
+  
+	SimpleMatrix ds;
+	SimpleMatrix bisect;
+	BitMatriz firm;
+	
+    
+    public Objeto(SimpleMatrix ds, SimpleMatrix bisect, BitMatriz firm ){
+        this.ds = ds;
+        this.bisect = bisect;
+        this.firm = firm;
+    }
+
+    
+    public SimpleMatrix getDs(){
+    	return this.ds;
+    }
+    
+    public SimpleMatrix getBisect(){
+    	return this.bisect;
+    	
+    }
+    
+    
+    public BitMatriz getFirm(){
+    	return this.firm;
+    	
+    }
+
+    
+}
